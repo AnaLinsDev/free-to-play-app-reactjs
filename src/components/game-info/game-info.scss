@@ -1,0 +1,26 @@
+
+.collection_games{
+    height: 100%;
+
+    .link_site_oficial{
+        margin-top: 20px;
+        font-size: 15px;
+        color: aqua;
+        font-weight: 100;
+        text-align: center;
+    }
+
+    .link_site_oficial:hover{
+        font-weight: 200;
+        color: rgb(233, 162, 8);
+    }
+    
+    .description{
+        text-align: left;
+        font-family: "Spartan", sans-serif;
+    }
+
+    footer{
+        padding-bottom: 50px;
+    }
+}

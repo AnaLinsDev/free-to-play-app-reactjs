@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Russo+One&display=swap');
+
+.gamesListPage {
+    margin: auto;
+    text-align: center;
+    color: whitesmoke;
+    font-family: 'Russo One', sans-serif;
+
+    .gamesList{
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+    }
+
+    .filtro{
+        width: 300px;
+        height: 30px;
+        margin-bottom: 10px;
+        padding-left: 15px;
+        padding-right: 15px;
+        background-color: whitesmoke ;
+        border-style: none;
+        border-radius: 10px;
+    }
+
+    .filtro:focus{
+        outline: none;
+    }
+}

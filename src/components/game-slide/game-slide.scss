@@ -1,0 +1,14 @@
+@import "react-slideshow-image/dist/styles.css";
+
+.collection_games_slide{
+    margin: 40px 0 40px 0;
+    .image{
+        width: 100%;
+        height: 270px;
+        background-size: cover;
+    }
+    button.nav.default-nav{
+        background: transparent;
+
+    }
+}

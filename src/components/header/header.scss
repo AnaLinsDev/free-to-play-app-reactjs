@@ -1,0 +1,35 @@
+.header {
+    height: 40px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    background-color:rgba(20, 19, 29, 0.89);
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+  
+    .home {
+      align-items: center;
+      text-decoration: none;
+      color: whitesmoke;
+      margin-left: 10px;
+      margin-top: 10px;
+    }
+  
+    .options {
+      width: 50%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      text-decoration: none;
+      color: whitesmoke;
+      padding-right: 20px;
+  
+      .option {
+        padding: 10px 15px;
+        cursor: pointer;
+      }
+    }
+  }
+  
