@@ -2,7 +2,6 @@ import React from 'react';
 import './games-list.scss'
 import GameItem from '../../components/game-item/game-item'
 
-
  class GamesListPage extends React.Component {
     constructor(props){
     super(props)
@@ -19,10 +18,7 @@ import GameItem from '../../components/game-item/game-item'
             this.setState( {games: out.filter(game => game.id < 91)})})
         .then(()=> this.setState( {gamesFilter: this.state.games }))
         .catch(err => { throw err });
-
-
     }
-
 
     handleChange = event => {
         this.setState({gamesFilter: this.state.games.filter(game => 
@@ -31,7 +27,6 @@ import GameItem from '../../components/game-item/game-item'
                 ))});
     }
 
-    
     render(){
         return (
         <div className="gamesListPage">
