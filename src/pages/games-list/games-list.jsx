@@ -2,7 +2,6 @@ import React from 'react';
 import './games-list.scss'
 import GameRoledex from '../../components/game-roledex/game-roledex';
 
-
  class GamesListPage extends React.Component {
     constructor(props){
     super(props)
@@ -29,12 +28,12 @@ import GameRoledex from '../../components/game-roledex/game-roledex';
         <div className="gamesListPage">
             <h1 className='title'>LIST OF GAMES</h1>
             <input className='filtro' placeholder="Search by Name" onChange={this.handleChange}></input>
- 
+
             <div className="gamesList">
             {
                 this.state.categories.map(category => (
                     <GameRoledex key={category} category={category} 
-                    filtro={this.state.gameFilterName}/>
+                    filtro={this.state.gameFilterName} />
                     ))
             }
             </div>

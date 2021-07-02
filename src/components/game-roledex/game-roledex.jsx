@@ -10,28 +10,25 @@ class GameRoledex extends React.Component {
     this.state = {
         games : [],
         gamesFilter : [],
-        gameFilterName : props.filtro,
+        gameFilterName : '',
         category : props.category
     }
     }
 
     UNSAFE_componentWillReceiveProps(newProps){
-        this.setState( {gameFilterName : newProps.filtro} )
         
-        fetch(`https://www.freetogame.com/api/games?category=${this.state.category}`)
-        .then(res => res.json())
-        .then((out) => {
-            this.setState( {games: out.filter(game => game.title.toLowerCase().startsWith(this.state.gameFilterName))})})
-        .catch(err => { throw err });
-        
+            this.setState( {gamesFilter: this.state.games.filter(game => 
+                game.title.toLowerCase().startsWith(newProps.filtro))})
+    
     }
 
     componentWillMount(){
-
-        fetch(`https://www.freetogame.com/api/games?category=${this.state.category}`)
+        fetch(`https://www.freetogame.com/api/games?platform=all&category=${this.state.category}&sort-by=popularity`)
         .then(res => res.json())
         .then((out) => {
-            this.setState( {games: out })})
+            this.setState( {games: out })
+            this.setState( {gamesFilter : out} )
+        })
         .catch(err => { throw err });
     }
 
@@ -49,14 +46,14 @@ class GameRoledex extends React.Component {
             },
             mobile: {
               breakpoint: { max: 464, min: 0 },
-              items: 5,
+              items: 2,
               slidesToSlide: 1 
             }
           };
 
         return ( 
         <div className="gamesListByCategory">
-            {this.state.games[0] ?
+            {this.state.gamesFilter[0] ?
                 <div>
                 <h1>{this.state.category}</h1>
                 <Carousel 
@@ -65,6 +62,7 @@ class GameRoledex extends React.Component {
                 showDots={false}
                 responsive={responsive}
                 infinite={true}
+                keyBoardControl={true}
                 customTransition="all .5"
                 transitionDuration={500}
                 containerClass="carousel-container"
@@ -73,7 +71,7 @@ class GameRoledex extends React.Component {
                 >
                 
                 {
-                this.state.games.map(({id, ...otherProps }) => (
+                this.state.gamesFilter.map(({id, ...otherProps }) => (
                     
                         <GameItem key={id} id={id} {...otherProps} />
                     
