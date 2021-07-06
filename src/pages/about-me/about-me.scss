@@ -8,11 +8,20 @@
     border-radius: 40px;
     box-shadow: 0 0 1em rgb(0, 0, 0);
 
+    h3{
+        font-size: 35px;
+    }
     p{
-        font-size: 15px;
+        font-size: 28px;
     }
     .image{
         width: 30px;
         height: 20px;
+    }
+}
+
+@media (max-width: 800px){
+    .about-me{
+        margin: 5px;
     }
 }

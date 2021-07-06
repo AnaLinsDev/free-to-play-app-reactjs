@@ -3,7 +3,7 @@ import './about-me.scss'
 import imageBrasil from '../../assets/bandeira-brasil.jpg'
 import imageUSA from '../../assets/bandeira-usa.jpg'
 
-const AboutMePage = ({}) => (
+const AboutMePage = () => (
     <div className='about-me'>
         <h3>Sobre mim <img src={imageBrasil} alt="imageBrasil" className='image' /></h3> 
         <p className='info'> Olá! Meu nome é Ana Júlia, esse site foi feito para inicializar a prática sozinha dos conhecimentos em ReactJS.</p>

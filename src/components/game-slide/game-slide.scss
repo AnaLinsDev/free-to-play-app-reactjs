@@ -4,8 +4,9 @@
     margin: 40px 0 40px 0;
     .image{
         width: 100%;
-        height: 270px;
+        height: 470px;
         background-size: cover;
+        background-position-x: center;
     }
     button.nav.default-nav{
         background: transparent;
@@ -13,3 +14,19 @@
     }
 
 }
+
+@media (min-width: 200px) and (max-width: 400px){
+    .collection_games_slide{
+        .image{
+            height: 200px;   
+        }
+    }
+}
+@media (min-width: 400px) and (max-width: 800px){
+    .collection_games_slide{
+        .image{
+            height: 400px;   
+        }
+    }
+}
+

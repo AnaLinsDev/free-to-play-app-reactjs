@@ -1,0 +1,77 @@
+  
+.sign-in {
+    width: 380px;
+    height: auto;
+    padding: 20px;
+    background-color: rgba(173, 170, 216, 0.651);
+    border-radius: 20px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+
+    .form{
+        display: flex;
+        flex-direction: column;
+    }
+    .title {
+        margin: 10px 0;
+    }
+    .buttons {
+        display: flex;
+        justify-content: space-between;
+
+    }
+    .input{
+        height: 30px;
+        font-size: 15px;
+    }
+    .celula{
+        display: flex;
+        flex-direction: column;
+        margin-top: 40px;
+    }
+    .label{
+        font-size: 20px;
+    }
+
+    .custom-button {
+        margin-top: 60px;
+        min-width: 165px;
+        width: auto;
+        height: 50px;
+        letter-spacing: 0.5px;
+        line-height: 50px;
+        font-size: 15px;
+        background-color: rgba(26, 14, 59, 0.719);
+        color: white;
+        text-transform: uppercase;
+        font-weight: bolder;
+        border: none;
+        cursor: pointer;
+
+      
+        &:hover {
+          background-color: white;
+          color: black;
+          border: 1px solid black;
+        }
+    }
+    
+@media (max-width: 500px){
+    .buttons {
+        width: 90%;
+        flex-direction: column;
+    }
+}
+@media (max-width: 300px){
+    .google-signin{
+        height: 100px;
+    }
+}
+
+}
+
+@media (max-width: 800px){
+    .sign-in {
+        width: 90%;
+    }
+}
+

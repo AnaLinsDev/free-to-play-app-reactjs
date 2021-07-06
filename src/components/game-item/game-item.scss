@@ -3,19 +3,20 @@
     margin-bottom: 25px;
     overflow: hidden;
     background-image: linear-gradient(rgba(20, 19, 29, 0.89),rgba(0, 0, 0, 0.89));
-    height: 200px;
+    height: 250px;
     a{
         text-decoration: none;
         color: whitesmoke;
     }
+
     .background-image{
-        height: 80px;
+        height: 120px;
         background-size:cover;
         background-position: center;
     }
 
     p {
-        font-size: 10px;
+        font-size: 15px;
         font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     }
     &:hover{
