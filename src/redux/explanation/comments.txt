@@ -1,0 +1,71 @@
+
+FLUX PATTERN -> images
+MVC  PATTERN -> images
+
+Pattern = padrão de projeto
+
+Redux = basicamente o this.state, mas global.
+
+Onde coloquei comentários:
+user.reducer.js
+user.selector.js
+user.actions.js
+___________________________________________________________________
+Ordem do que fazer
+
+1 - npm install react-redux redux redux-logger
+2 - vá no index.js e adicione o Provider
+3 - criar store.js e root-reducer.js 
+4 - criar pasta e arquivos com o primeiro 'dono' dos state que irá usar ex : User
+5 - importar o user.reducer, nesse caso, para o root-reducer.js
+6 - criar o store.js e colocar o createStore(root-reducer) 
+7 - importar connect() do react-redux no componente que precisará do currentUser
+8 - importar connect() do react-redux no App.js
+9 - utilizar os mapStateToProps e mapDispatchToProps nos componentes
+10 - usar o redux ^.^
+____________________________________________________________________
+
+ACTION -> Object {type: 'SET_CURRENT_USER', payload: null}
+REDUCER -> pure function em que entrará 2 args (currentState, action)
+TYPE -> tipo um ENUM, para padronizar os tipos e evitar erros na digitaçaõ
+SELECTOR -> 
+___________________________________________________________________
+
+1 - User aperta em SIGN IN (manda [type, userInfo] para o reducer)
+
+2 - No reducer, se o 'SET_CURRENT_USER' existir, entrará nesse case 
+    e deverá retornar o state atual + user atualizado
+
+3 - Quandoo state for atualizado, apenas os componentes que usam o 
+    User devem atualizar
+
+4 - 
+
+5 - 
+
+6 - 
+
+___________________________________________________________________
+
+mapStateToProps : traz o state para this.props
+Aqui iremos para root-reducer -> user: userReducer -> 
+no userReducer haverá a pure function que deve retornar o state atual
+
+mapDispatchToProps : traz os actions para this.props
+irá passar a Action para todos Reducer
+
+Ambos serão inicializados junto com o componente/page, a partir do 
+connect() -> o connect só irá conectar o react com o redux, garantindo 
+a comunicação dos gets e sets para o state global, o store !
+___________________________________________________________________
+
+
+
+___________________________________________________________________
+
+
+
+
+____________________________________________________________________
+
+

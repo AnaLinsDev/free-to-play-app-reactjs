@@ -16,10 +16,8 @@ class GameRoledex extends React.Component {
     }
 
     UNSAFE_componentWillReceiveProps(newProps){
-        
             this.setState( {gamesFilter: this.state.games.filter(game => 
                 game.title.toLowerCase().startsWith(newProps.filtro))})
-    
     }
 
     componentWillMount(){

@@ -1,0 +1,19 @@
+TODO
+- adicionar games escolhidos no wishlist page ( 7 )
+- adicionar popup quando o user for cadastrado ( 8 )
+- adicionar popup quando o user for logado ( 8 )
+- adicionar popup quando o user escrever senha errada ( 9 )
+- menu responsivo ( 10 )
+
+DOING
+- adicionar redux para administrar todos states ( 6 )
+
+DONE
+- listagem dos games no home page ( 1 )
+- detalhes do game no gamebyid page ( 2 )
+- motivação para o app no about me page ( 3 )
+- responsividade do site, exceto menu  ( 4 )
+- adicionar os routes no app.js, menu e home page ( 4 )
+- login e cadastro no signin-signup page ( 5 )
+
+

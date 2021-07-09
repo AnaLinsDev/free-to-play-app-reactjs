@@ -1,6 +1,8 @@
 import React from 'react';
 import './header.scss'
+import {connect} from 'react-redux';
 import {Link} from 'react-router-dom';
+
 import { auth } from '../../firebase/firebase.utils';
 
 const Header = ({currentUser}) => (
@@ -16,7 +18,7 @@ const Header = ({currentUser}) => (
           Sign Out
         </div>
       ) : (
-        <Link  to='/signin-signup' className='option'>
+        <Link  to='/signin' className='option'>
           Sign In
         </Link>
       )}
@@ -25,4 +27,24 @@ const Header = ({currentUser}) => (
     </div>
 )
 
-export default Header
+const mapStateToProps = state => ({
+  currentUser: state.user.currentUser,
+})
+
+
+export default connect(mapStateToProps)(Header)
+
+
+
+
+/*
+
+
+const mapStateToProps = state => ({
+  currentUser: state.user.currentUser,
+})
+
+Aqui iremos para root-reducer -> user: userReducer -> 
+no userReducer haverá a pure function que deve retornar o state atual
+
+*/
