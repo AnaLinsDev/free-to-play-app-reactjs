@@ -2,7 +2,6 @@ import './App.css';
 import React from 'react';
 import { Switch, Route, BrowserRouter as Router, Redirect } from 'react-router-dom';
 import {auth, createUserProfileDocument} from './firebase/firebase.utils'
-import {connect} from 'react-redux';
 //pages
 import GamesListPage from './pages/games-list/games-list';
 import ErrorPage from './pages/error/error-page';
@@ -14,6 +13,7 @@ import WishlistPage from './pages/wishlist/wishlist'
 import Header from './components/header/header';
 import Footer from './components/footer/footer';
 //redux
+import {connect} from 'react-redux';
 import { setCurrentUser } from './redux/user/user.actions'
 
 

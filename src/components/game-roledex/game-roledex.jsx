@@ -21,6 +21,7 @@ class GameRoledex extends React.Component {
     }
 
     componentWillMount(){
+
         fetch(`https://www.freetogame.com/api/games?platform=all&category=${this.state.category}&sort-by=popularity`)
         .then(res => res.json())
         .then((out) => {
@@ -41,6 +42,7 @@ class GameRoledex extends React.Component {
               breakpoint: { max: 1024, min: 464 },
               items: 5,
               slidesToSlide: 1 
+
             },
             mobile: {
               breakpoint: { max: 464, min: 0 },
@@ -55,32 +57,34 @@ class GameRoledex extends React.Component {
                 <div>
                 <h1>{this.state.category}</h1>
                 <Carousel 
-                swipeable={false}
                 draggable={false}
-                showDots={false}
+                customTransition='transform 350ms ease-in-out'
+                transitionDuration={350}
+                centerMode={true}
                 responsive={responsive}
                 infinite={true}
-                keyBoardControl={true}
-                customTransition="all .5"
-                transitionDuration={500}
                 containerClass="carousel-container"
+                removeArrowOnDeviceType={['mobile', 'tablet']}
                 deviceType={this.props.deviceType}
-                dotListClass="custom-dot-list-style"
                 >
                 
                 {
-                this.state.gamesFilter.map(({id, ...otherProps }) => (
+                this.state.gamesFilter.map((game) => (
                     
-                        <GameItem key={id} id={id} {...otherProps} />
-                    
+                        <GameItem key={game.id} game={game} />
+
                 ))
                 }
                 </Carousel>
                 <hr></hr>
                 </div>
                 :''}
+                
         </div>
         )
     }
 }
+
+
+
 export default GameRoledex

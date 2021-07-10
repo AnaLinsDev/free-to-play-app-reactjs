@@ -1,4 +1,6 @@
 TODO
+- adicionar button component
+- adicionar input  component
 - adicionar games escolhidos no wishlist page ( 7 )
 - adicionar popup quando o user for cadastrado ( 8 )
 - adicionar popup quando o user for logado ( 8 )
