@@ -26,9 +26,14 @@ Ordem do que fazer
 ____________________________________________________________________
 
 ACTION -> Object {type: 'SET_CURRENT_USER', payload: null}
+
 REDUCER -> pure function em que entrará 2 args (currentState, action)
+
 TYPE -> tipo um ENUM, para padronizar os tipos e evitar erros na digitaçaõ
-SELECTOR -> 
+
+SELECTOR -> É usado para que toda vez que um state atualize, não precise atualizar todos os 
+            dados da aplicação, por exemplo, se atualizar apenas a quantidade de games no 
+            wishlist, não precisa ficar observando o currentUser
 ___________________________________________________________________
 
 1 - User aperta em SIGN IN (manda [type, userInfo] para o reducer)
@@ -59,12 +64,35 @@ connect() -> o connect só irá conectar o react com o redux, garantindo
 a comunicação dos gets e sets para o state global, o store !
 ___________________________________________________________________
 
+SELECTORS : 
+Usa a library reselect !!!
 
+//Mais comentários no wishlist.selector
+
+tipos: com input e sem input
+
+(((  Antes  )))
+
+
+  const mapStateToProps = ({wishlist}) => ({
+    games: wishlist.games,
+    quantity: wishlist.games.length
+  })
+
+(((  Depois  )))
+
+const mapStateToProps = state => ({
+    games: selectWishList(state),
+    quantity: selectWishList(state).length
+  })
 
 ___________________________________________________________________
 
-
-
+Usaremos o redux persist para administrar o local storage e guardar os games no wishlist
+1 - install redux-persist
+2 - atualizar o store.js ( persistStore )
+3 - atualizar o root-reducer.js (  persistReducer, storage  )
+4 - atualizar o index.js (  PersistGate  )
 
 ____________________________________________________________________
 

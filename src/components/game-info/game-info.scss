@@ -28,4 +28,30 @@
     footer{
         padding-bottom: 50px;
     }
+    .button-wishlist-area{
+        text-align: right;
+        margin-right: 20px;
+    }
+    .button-wishlist{
+        font-size: 25px;
+        box-shadow: 0 0 0.2em rgb(81, 94, 206);
+        border-style: none;
+        padding: 10px;
+        border-radius: 10px;
+        font-weight: bold;
+        background-color: rgba(107, 235, 141, 0.678);
+    }
+    .button-wishlist:hover{
+        background-color: rgba(8, 240, 70, 0.678);
+        color: rgb(0, 0, 0);
+        box-shadow: 0 0 0.8em rgb(50, 64, 192);
+        
+    }
+}
+
+@media (max-width: 380px)
+{
+  h2{
+      font-size: 80%;
+  }
 }

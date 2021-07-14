@@ -1,11 +1,9 @@
 TODO
-- adicionar button component
-- adicionar input  component
-- adicionar games escolhidos no wishlist page ( 7 )
-- adicionar popup quando o user for cadastrado ( 8 )
-- adicionar popup quando o user for logado ( 8 )
+- adicionar button component( 8 )
+- adicionar input  component( 8 )
+- adicionar popup quando o user for cadastrado ( 9 )
 - adicionar popup quando o user escrever senha errada ( 9 )
-- menu responsivo ( 10 )
+
 
 DOING
 - adicionar redux para administrar todos states ( 6 )
@@ -17,5 +15,8 @@ DONE
 - responsividade do site, exceto menu  ( 4 )
 - adicionar os routes no app.js, menu e home page ( 4 )
 - login e cadastro no signin-signup page ( 5 )
+- adicionar popup quando o user for logado ( 6 )
+- menu responsivo ( 6 )
+- adicionar games escolhidos no wishlist page ( 7 )
 
 

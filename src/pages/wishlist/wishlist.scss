@@ -1,3 +1,36 @@
 .wishlist {
     color: whitesmoke;
+
+    .game-wishlist{
+        display: grid;
+        grid-template-columns: repeat(5,1fr);
+    }
+
+    h2{    
+        margin-right: 20px;
+        text-align: right;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    
+    }
+
+    @media (max-width: 620px)
+{
+    .game-wishlist{
+        grid-template-columns: repeat(3,1fr);
+    }
 }
+    @media (max-width: 400px)
+    {
+        .game-wishlist{
+            grid-template-columns: repeat(2,1fr);
+        }
+    }
+    @media (max-width: 300px)
+    {
+        .game-wishlist{
+            grid-template-columns: repeat(1,1fr);
+        }
+    }
+}
+
+

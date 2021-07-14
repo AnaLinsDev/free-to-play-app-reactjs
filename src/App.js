@@ -56,7 +56,13 @@ class App extends React.Component {
           <Route exact path='/' component={GamesListPage} />
           <Route path='/game/:id' component={GameByIdPage} />
           <Route path='/aboutme' component={AboutMePage} />
-          <Route path='/wishlist' component={WishlistPage} />
+          
+
+          <Route  exact path='/wishlist' render={
+              () => this.props.currentUser ? 
+              <WishlistPage /> : 
+              <Redirect to='/signin'/>}/> 
+          
           <Route  exact path='/signin' render={
               () => this.props.currentUser ? 
               (<Redirect to='/'/>) : 
@@ -66,7 +72,7 @@ class App extends React.Component {
 
       </Switch>
       </Router>
-      <Footer />
+      <Footer className='footer'/>
     </div>
     );
   }

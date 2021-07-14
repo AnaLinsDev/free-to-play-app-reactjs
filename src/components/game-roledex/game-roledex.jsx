@@ -40,7 +40,7 @@ class GameRoledex extends React.Component {
             },
             tablet: {
               breakpoint: { max: 1024, min: 464 },
-              items: 5,
+              items: 3,
               slidesToSlide: 1 
 
             },
@@ -57,10 +57,10 @@ class GameRoledex extends React.Component {
                 <div>
                 <h1>{this.state.category}</h1>
                 <Carousel 
-                draggable={false}
+                draggable={true}
                 customTransition='transform 350ms ease-in-out'
                 transitionDuration={350}
-                centerMode={true}
+                centerMode={false}
                 responsive={responsive}
                 infinite={true}
                 containerClass="carousel-container"

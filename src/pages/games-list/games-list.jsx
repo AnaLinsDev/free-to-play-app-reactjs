@@ -25,8 +25,9 @@ import GameRoledex from '../../components/game-roledex/game-roledex';
         return (
         <div className="gamesListPage">
             <h1 className='title'>LIST OF GAMES</h1>
+            <div className='filtro-area'>
             <input className='filtro' placeholder="Search by Name" onChange={this.handleChange}></input>
-
+            </div>
             <div className="gamesList">
             {
                 this.state.categories.map(category => (

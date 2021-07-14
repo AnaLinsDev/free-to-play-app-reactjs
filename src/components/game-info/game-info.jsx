@@ -1,13 +1,22 @@
 import React from 'react';
 import './game-info.scss'
+import { addGame } from '../../redux/wishlist/wishlist.actions';
+import {connect} from 'react-redux';
+import { Link } from 'react-router-dom';
 
-
-
-const GameInfo = ({props}) => (
+const GameInfo = ({props, addGame}) => (
 
     <div className='collection_games'>
-
         <p>{props.short_description}</p>
+
+        <Link to={`/wishlist`} >
+            <div className= 'button-wishlist-area'>
+                <button onClick={()=> addGame(props)}className='button-wishlist'>
+                    + Wishlist
+                </button>
+            </div>
+        </Link>
+
          {/* Lista de dados */}
         <h2>Data</h2>
         <p> Genre : {props.genre}</p>
@@ -19,7 +28,7 @@ const GameInfo = ({props}) => (
         então fiz um if para que se retornar "undefined", ele apenas retorne vazio */}
         <hr></hr>
         {props.minimum_system_requirements ? 
-        <div>Minimum system requirements
+        <div><h2>Minimum system requirements</h2>
             <p> Operating System : {props.minimum_system_requirements.os}</p>
             <p> Processor : {props.minimum_system_requirements.processor}</p>
             <p> Memory : {props.minimum_system_requirements.memory}</p>
@@ -39,4 +48,9 @@ const GameInfo = ({props}) => (
     </div>
 )
 
-export default GameInfo
+const mapDispatchToProps = dispatch => ({
+    addGame: game => dispatch(addGame(game))
+  })
+  
+  
+export default connect(null, mapDispatchToProps)(GameInfo)
