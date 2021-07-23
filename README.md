@@ -1,3 +1,8 @@
+
+<h2>Link para melhor visualizar o site:<br>
+  <a href='https://www.youtube.com/watch?v=_gBB1RzNSp4&ab_channel=AnaJuliaOliveiraLins' target='_blank'>Clique aqui !!</a>
+  <h2>
+<br><br>
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
