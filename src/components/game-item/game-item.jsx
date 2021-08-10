@@ -23,7 +23,7 @@ const GameItem = ({game, removeGame}) => {
             className='background-image'
             style={{ backgroundImage: `url(${thumbnail})` }}/>
         
-        <p>{title}<br/>Genre: {genre}<br/>Platform: {platform}</p>
+        
         </Link>
         </div>
         
