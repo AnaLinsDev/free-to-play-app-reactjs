@@ -3,6 +3,9 @@
   <a href='https://www.youtube.com/watch?v=_gBB1RzNSp4&ab_channel=AnaJuliaOliveiraLins' target="_blank">Clique aqui !!</a>
   <h2>
 <br><br>
+    
+   ![freeToPlay01-React](https://user-images.githubusercontent.com/60307596/130265320-63646d08-c7a4-490b-aadd-77cec15a7f80.PNG)
+    
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
